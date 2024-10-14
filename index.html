@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVVA Biotech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <body>
+
+        <div class="cta-revendedor-fixo">
+            <a href="https://www.priime.com.br/clinical" target="_blank">
+                <button>Comprar</button>
+            </a>
+        </div>
+
+        <header>
+            <div class="header-container">
+                <div class="header-logo">
+                    UVVA Biotech
+                </div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776; 
+                </div>
+                <nav class="header-cta-group">
+                    <button onclick="document.querySelector('.section-three').scrollIntoView({ behavior: 'smooth' });">Home</button>
+                    <button onclick="document.querySelector('.section-with-image').scrollIntoView({ behavior: 'smooth' });">Sobre</button>
+                    <button onclick="document.querySelector('.footer-container').scrollIntoView({ behavior: 'smooth' });">Contato</button>
+                </nav>
+                <div class="header-cta-right">
+                    <a href="https://api.whatsapp.com/send?phone=+5562999678080&text=Olá, gostaria de saber mais sobre como ser um revendedor!" target="_blank">
+                        <button>Seja Revendedor</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+
+        <main>
+            <!-- Primeira Secção -->
+            <section class="section-one">
+                <div class="text-content">
+                    <h1>UVVA Biotech</h1>
+                    <p>
+                        Desodorante biológico
+                    </p>
+                </div>
+            </section>
+
+            <!-- Terceira Secção -->
+            <section class="section-three">
+                <img src="GABARITO_PARA_FOTOS_DO_SITE-removebg-preview.png" alt="Imagem Grande">
+                <div class="text-content">
+                    <h2>UVVA Biotech</h2>
+                    <br>
+                    <p>O desodorante UVVA Biotech é uma excelente escolha para quem procura um produto natural e seguro, especialmente para peles sensíveis e alérgicas. Desenvolvido com ativos naturais, ele oferece uma gama de benefícios, sendo ideal para um cuidado diário consciente e eficaz</p>
+                    <br>
+                    <a href="https://www.priime.com.br/clinical/uvva-biotech-" target="_blank">
+                    <button class="cta-buy">Comprar</button>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Secção com 4 Blocos -->
+            <section class="four-blocks">
+                <div class="block"><strong>Hipoalergênico e bio vegano:</strong> Formulado para minimizar o risco de alergias, sem ingredientes de origem animal, garantindo segurança para as peles mais delicadas.</div>
+                <div class="block"><strong>Fungistático de amplo espectro:</strong> Ajuda a inibir o crescimento de fungos, proporcionando uma proteção eficaz e duradoura.</div>
+                <div class="block"><strong>Efeito anti-biofilme:</strong> Previne a formação de biofilmes, que são comunidades de microrganismos responsáveis pelo mau odor, mantendo a pele fresca por mais tempo.</div>
+            </section>
+
+                <!-- Secção com imagem e títulos com descrição -->
+            <section class="section-with-image">
+                <div class="text-content">
+                    <h2>fórmula avançada</h2>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-title" data-image="noni-morinda-citrifolia-osivo-noni-5-ks.jpg">
+                                <h3>Morinda citrifolia</h3>
+                                <span class="arrow">&#9660;</span>
+                            </div>
+                            <div class="accordion-description">
+                                <p>A partir de células-tronco de plantas Noni, foi 
+                                    desenvolvido um Plasma Rico em Fatores Celulares rico em moléculas que 
+                                    inibe o Quorum Sensing: QUORUM QUENCHING
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-title" data-image="deobiome_none.png">
+                                <h3>Deobiome None™</h3>
+                                <span class="arrow">&#9660;</span>
+                            </div>
+                            <div class="accordion-description">
+                                <p>Derivado das células-tronco da planta Morinda citrifolia, conhecida como planta Noni, sendo, portanto, alinhado ao conceito de desodorante biológico. 
+                                    O ativo combina tecnologia prebiótica inovadora e os mais recentes avanços em células-tronco vegetais, modulando a microbiota da pele sem causar sua completa remoção, 
+                                    controlando o mau odor corporal com respeito ao microbioma cutânea.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-title" data-image="quorum_quenching.png">
+                                <h3>Inibição Quorum Sensing (Quorum Quenching)</h3>
+                                <span class="arrow">&#9660;</span>
+                            </div>
+                            <div class="accordion-description">
+                                <p>A inibição do Quorum Sensing (ou Quorum Quenching) se
+                                    baseia no uso de Anti-Quormones que
+                                    bloqueiam/trabalham os sistemas de comunicação de
+                                    bactérias exacerbadas sem matá-las.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-content">
+                    <img id="accordion-image" src="axila_homem.png" alt="Imagem padrão">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="footer-container" class="footer-container">
+                <!-- Seção Sobre -->
+                <div class="footer-section about">
+                    <h2>Sobre Nós</h2>
+                    <p>
+                        Somos uma empresa dedicada a fornecer<br> os melhores produtos aos nossos clientes.<br>Nossa missão é entregar qualidade e satisfação.
+                    </p>
+                </div>
+        
+                <!-- Seção de Contato -->
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ed. Walk Bueno Business - R. T-55, 930 -<br>St. Bueno, Goiânia - GO, 74215-170</li>
+                        <li><i class="fas fa-phone-alt"></i> (62) 99967-8080</li>
+                        <li><i class="fas fa-envelope"></i> comercial@priime.com.br</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Seção de Direitos Autorais -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 PRIIME VIDA E SAUDE LTDA. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>    
+    </body>
+</html>

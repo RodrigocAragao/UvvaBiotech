@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+}
+
+main {
+    padding-top: 75px;
+}
+
+.cta-revendedor-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.cta-revendedor-fixo button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-revendedor-fixo button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Estilos básicos para o header */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Colocar o header acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Certifica que o menu seja posicionado corretamente */
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 55px;
+}
+
+.header-cta-group a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header-cta-group button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.header-cta-right button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.header-cta-right button:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Ícone do menu sanduíche (escondido em ecrãs maiores) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Layout normal para ecrãs grandes */
+.header-cta-group, .header-cta-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para ecrãs menores */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Exibe o ícone hambúrguer */
+    }
+
+    .header-cta-group, .header-cta-right {
+        display: none; /* Esconde os links e o botão no início */
+        flex-direction: column; /* Empilha os itens verticalmente */
+        background-color: #444;
+        width: 100%; /* O menu ocupa 100% da largura */
+        text-align: center;
+        position: absolute; /* Faz o menu aparecer abaixo do header */
+        top: 100%; /* Posiciona o menu logo abaixo do header */
+        left: 0;
+        z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+    }
+
+    /* Menu aparece quando ativado */
+    .header-container.active .header-cta-group, 
+    .header-container.active .header-cta-right {
+        display: flex;
+        flex-direction: column; /* Itens alinhados verticalmente */
+    }
+
+    .header-cta-group a {
+        margin: 10px 0; /* Deixa os links alinhados verticalmente */
+    }
+
+    .header-cta-right {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* Primeira Seção */
+.section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total do ecrã */
+    background-image: url('skin-care-woman-with-beauty-face-touching-healthy-facial-skin-portrait-beautiful-smiling-girl-model-with-natural-makeup-touching-glowing-hydrated-skin-white-wall.jpg'); /* Substituir pelo caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    position: relative;
+    max-height: 300px;
+    margin-bottom: 40px;
+}
+
+.section-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay para melhorar a legibilidade */
+    z-index: 1;
+}
+
+.section-one .text-content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fica acima do overlay */
+    max-width: 800px; /* Limita a largura do conteúdo */
+}
+
+.section-one h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section-one p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white; /* Mantém o texto legível sobre o fundo */
+}
+
+/* Responsividade para ecrãs menores */
+@media (max-width: 768px) {
+    .section-one h1 {
+        font-size: 36px;
+    }
+
+    .section-one p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* Secção com 4 blocos */
+.four-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.block {
+    padding: 20px;
+    background-color: #ab9ad4;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/* Carrossel para ecrãs menores */
+@media (max-width: 768px) {
+    .four-blocks {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .block {
+        min-width: 80%;
+        scroll-snap-align: start;
+    }
+}
+
+
+
+
+/* Terceira Secção */
+.section-three {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.section-three img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-three .text-content {
+    max-width: 45%;
+}
+
+.section-three .cta-buy {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-three {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .section-three .image-content,
+    .section-three .text-content {
+        max-width: 100%; 
+    }
+
+    .section-three img {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Secção com acordeão */
+.section-with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.image-content {
+    max-width: 45%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: #ddd;
+}
+
+.accordion-title h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.accordion-title .arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-description {
+    display: none; /* Inicialmente escondido */
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid rgb(70, 3, 196);
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+}
+
+.accordion-item.active .accordion-description {
+    display: block; /* Mostrar descrição ao clicar */
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(180deg); /* Gira a seta para cima */
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .section-with-image {
+        flex-direction: column;
+    }
+
+    .text-content, 
+    .image-content {
+        max-width: 100%;
+    }
+
+    .accordion-description {
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+/* Estilo do Footer */
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.footer-section {
+    min-width: 250px;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Estilo da Seção "Sobre Nós" */
+.footer-section.about p {
+    text-align: justify;
+}
+
+.footer-section.about
+
+/* Estilo da Seção de Contato */
+.footer-section.contact ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-section.contact ul li i {
+    margin-right: 10px;
+}
+
+/* Seção de Direitos Autorais */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    font-size: 12px;
+}
